@@ -26,7 +26,7 @@ body{
     background-color: var(--primaryPaleBlue);
     background-image: url("../img/pattern-background-mobile.svg");
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: 100%;
     font-family: var(--fontFamily);
     font-size: var(--fontSize);
     width: 100vw;
