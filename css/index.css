@@ -1,0 +1,140 @@
+:root{ 
+    /*primary color*/
+    --primaryPaleBlue: hsl(225, 100%, 94%);
+    --primaryBrightBlue: hsl(245, 75%, 52%);
+    
+    /*neutral color*/
+    --neutralVeryPaleBlue: hsl(225, 100%, 98%);
+    --neutralDesaturatedBlue: hsl(224, 23%, 55%);
+    --neutralDarkBlue: hsl(223, 47%, 23%);
+    
+    /*typography*/
+    --fontSize: 1rem;
+    --fontFamily: "Red Hat Display", sans-sarif;
+    --weight500: 500;
+    --weight700: 700;
+    --weight900: 900;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--primaryPaleBlue);
+    background-image: url("../img/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    background-color: var(--neutralVeryPaleBlue);
+    overflow: hidden;
+    border-radius: 1rem;
+    max-width: 80%;
+    text-align: center;
+    filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.25));
+}
+
+.subscriber{
+    width: 100%;
+}
+
+.infoSection{
+    padding: 1.125rem;
+}
+
+.library{
+    line-height: 1.6rem;
+    padding: 0.625rem 0;
+}
+
+.list{
+    background-color: hsla(224, 23%, 55%, 0.05);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.75rem 0;
+    margin: 1.125rem 0;
+}
+
+.plan{
+    line-height: 1.5rem;
+    margin-right: 40px;
+}
+
+.list, .plan{
+    list-style: none;
+}
+
+.proceed, .list{
+    border-radius: 0.5rem;
+}
+
+.proceed{
+    display: block;
+    background-color: var(--primaryBrightBlue);
+    color: var(--neutralVeryPaleBlue);
+    text-decoration: none;
+    padding: 0.8125rem;
+    margin-bottom: 1.125rem;
+    filter: drop-shadow(0 1rem 0.5rem rgba(0, 0, 0, 0.25));
+}
+
+.cancelOrder{
+    color: var(--neutralDesaturatedBlue);
+    text-decoration: none;
+}
+
+/*setting weights for the text*/
+.library, .costItem{
+    font-weight: var(--weight500);
+}
+
+.mainHeading, .annualPlanItem, .cancelOrder{
+    font-weight: var(--weight900);
+}
+
+.changeItem, .proceed{
+    font-weight: var(--weight700);
+}
+
+/*hover, active and focus states*/
+.change:hover,
+.change:active,
+.change:focus{
+    text-decoration: none;
+}
+
+.proceed:hover,
+.proceed:active,
+.proceed:focus{
+    background-color: hsla(245, 75%, 52%, 0.70);
+    transition: 1s;
+}
+
+.cancelOrder:hover,
+.cancelOrder:active,
+.cancelOrder:focus{
+    color: black;
+    transition: 1s;
+}
+
+@media screen and (min-width: 480px){
+    body{
+        background-image: url("../img/pattern-background-desktop.svg");
+        background-size: 100% 50%;
+    }
+
+    .card{
+        width: 330px;
+    }
+}
